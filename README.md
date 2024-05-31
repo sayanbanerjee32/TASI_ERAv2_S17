@@ -14,4 +14,4 @@
 
 
 ## Result
-Achieved loss of 3.85 after 10 epochs
+Achieved loss of 3.4 after 11 epochs
