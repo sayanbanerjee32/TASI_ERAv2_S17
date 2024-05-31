@@ -1,6 +1,3 @@
-from re import X, sub
-from networkx import directed_configuration_model
-from sympy import div
 import torch
 import torch.nn as nn
 import math
@@ -25,7 +22,7 @@ class FeedForwardBlock(nn.Module):
         super().__init__()
         self.linear_1 = nn.Linear(d_model,d_ff) #squeeze and expand
         self.dropout = nn.Dropout(dropout)
-        self.linear_2 = nn.Linear(d_model,d_ff)
+        self.linear_2 = nn.Linear(d_ff, d_model)
 
     def forward(self,x):
         x = torch.relu(self.linear_1(x))
